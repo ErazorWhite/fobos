@@ -1,0 +1,20 @@
+{
+  "pages": [
+    { "id": "home", "name": "Главная", "path": "/home" },
+    { "id": "about-fobos", "name": "О сервере Fobos", "path": "/about" },
+    { "id": "how-to-join", "name": "Как начать играть", "path": "/start" },
+    { "id": "rules", "name": "Правила", "path": "/rules" },
+    { "id": "roles", "name": "Роли и профессии", "path": "/roles" },
+    { "id": "stations-and-maps", "name": "Станции и карты", "path": "/maps" },
+    { "id": "factions", "name": "Фракции и антагонисты", "path": "/factions" },
+    { "id": "guides", "name": "Гайды и механики", "path": "/guides" },
+    { "id": "changelog", "name": "Обновления (Changelog)", "path": "/changelog" },
+    { "id": "events", "name": "Ивенты", "path": "/events" },
+    { "id": "server-status", "name": "Статус сервера", "path": "/status" },
+    { "id": "ban-appeals", "name": "Апелляции банов", "path": "/appeals" },
+    { "id": "report-bug", "name": "Сообщить об ошибке", "path": "/report" },
+    { "id": "donate", "name": "Поддержать проект", "path": "/donate" },
+    { "id": "staff", "name": "Команда проекта", "path": "/staff" },
+    { "id": "contacts", "name": "Контакты / Discord", "path": "/contacts" }
+  ]
+}

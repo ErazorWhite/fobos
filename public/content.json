@@ -1,0 +1,29 @@
+{
+  "site": { "title": "React Starter", "homepage": "home" },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Welcome 👋",
+      "sections": [
+        { "title": "Fast start", "icon": "Rocket", "color": "#6ea8fe", "body": "Opinionated каркас: тема, глобальные стили, лэйаут, роутинг, шапка + мобильное меню." },
+        { "title": "Design tokens", "icon": "Palette", "color": "var(--color-main-purple)", "body": "Единая тема через CSS variables; типографика и отступы в styled‑components." },
+        { "title": "Composable UI", "icon": "Blocks", "body": "Переиспользуемые компоненты: контейнер, карточка секции, лого, сайд‑дроуэр." },
+        { "title": "Routing", "icon": "Repeat", "body": "React Router v6: корневой Layout + вложенные страницы. Контент идёт из JSON." }
+      ]
+    },
+    {
+      "slug": "about",
+      "title": "About",
+      "sections": [
+        { "title": "Проект", "icon": "Info", "body": "Эта страница целиком описана в JSON без правок TSX." }
+      ]
+    },
+    {
+      "slug": "docs",
+      "title": "Docs",
+      "sections": [
+        { "title": "Редактирование", "icon": "Edit", "body": "Открой public/content.json и правь страницы, секции, иконки, цвета." }
+      ]
+    }
+  ]
+}
