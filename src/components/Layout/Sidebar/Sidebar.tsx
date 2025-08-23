@@ -6,7 +6,7 @@ import {
     MediaFlexWrapper,
     NavigationDetails,
 } from './Sidebar.styled.ts';
-import {type FC, memo, useEffect, useState} from 'react';
+import { type FC, memo, useEffect, useState} from 'react';
 import {ThemeSwitcher} from "_/components/ThemeSwitcher";
 import {ToggleSidebarButton} from "_/components/buttons";
 import {useParams} from "react-router";
@@ -48,13 +48,10 @@ export const Sidebar: FC<ISidebarProps> = ({onClick}) => {
         void fetchPages();
     }, []);
 
-    console.log('pageId', pageId);
-
-
     return (
         <SidebarContainer onClick={onClick}>
             <SidebarContent onClick={(e) => e.stopPropagation()}>
-                <NavigationTitle>ALL PAGES</NavigationTitle>
+                <NavigationTitle>ВСЕ СТРАНИЦЫ</NavigationTitle>
 
                 <MediaFlexWrapper>
                     <NavigationDetails>

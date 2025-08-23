@@ -1,9 +1,14 @@
-import {type FC, memo, useEffect, useState} from "react";
+import {CSSProperties, type FC, memo, useEffect, useState} from "react";
 import {Controls, DropdownButton, Nav, Page, PageName, StyledHeader} from "_/components/Layout";
 import {IconChevronUp} from "_/components/icons/IconChevronUp.tsx";
 import {IconChevronDown} from "_/components/icons/IconChevronDown.tsx";
 import {Logo} from "_/components/Logo/Logo.tsx";
 import {useParams} from "react-router";
+
+const madeByStyle: CSSProperties = {
+    color: "rgba(128, 128, 128, 0.6)",
+    margin: "0 20px 0 0",
+}
 
 interface IHeaderProps {
     isDropdownOpened: boolean;
@@ -44,6 +49,7 @@ const Header: FC<IHeaderProps> = ({isDropdownOpened, onDropDownOpen}) => {
             </Nav>
             <Controls>
                 {/* TODO: TBD */}
+                <span style={madeByStyle}>Made by Erazor</span>
             </Controls>
         </StyledHeader>
     );
