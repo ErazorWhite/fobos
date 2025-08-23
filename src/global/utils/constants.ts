@@ -11,3 +11,8 @@ export const enum ButtonVariantsColor {
     Secondary = 'secondary',
     Destructive = 'destructive',
 }
+
+export const enum Sizes {
+    SMALL = 'small',
+    MEDIUM = 'medium',
+}

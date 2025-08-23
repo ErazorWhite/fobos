@@ -1,27 +1,27 @@
 import styled from 'styled-components';
-import { DESKTOP_BP, MOBILE_BP, TABLET_BP } from '../../../../kanban-task-management-web-app/src/global/utilities/breakpoints.ts';
+import {DESKTOP_BP, MOBILE_BP, TABLET_BP} from "_/global";
 
 export const ToggleMainBlock = styled.button`
-  display: flex;
-  gap: 23px;
+    display: flex;
+    gap: 23px;
 
-  justify-content: center;
-  align-items: center;
-  padding: 14px 0;
-  min-width: 235px;
-  background-color: var(--color-secondary-body-bg);
-  border-radius: 8px;
-  overflow: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 0;
+    min-width: 235px;
+    background-color: var(--color-secondary-body-bg);
+    border-radius: 8px;
+    overflow: auto;
 
-  @media screen and ${MOBILE_BP} {
-    margin: 16px 0 0 0;
-  }
-  @media screen and ${TABLET_BP} {
-    margin: 0 0 16px 0;
-  }
-  @media screen and ${DESKTOP_BP} {
-    margin: 0 0 8px 0;
-  }
+    @media screen and ${MOBILE_BP} {
+        margin: 16px 0 0 0;
+    }
+    @media screen and ${TABLET_BP} {
+        margin: 0 0 16px 0;
+    }
+    @media screen and ${DESKTOP_BP} {
+        margin: 0 0 8px 0;
+    }
 `;
 
 interface ToggleOptionProps {
