@@ -114,7 +114,7 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
         font-size: 32px;
         display: block;
     }
-`,zg=({isTextProvided:u=!1})=>w.jsxs(_g,{to:"/home",children:[w.jsx(Rg,{src:"public/favicon.png",alt:"logo"}),u&&w.jsx(Og,{children:"Fobos"})]}),Mg=({isDropdownOpened:u,onDropDownOpen:c})=>{const{pageId:f=""}=j0(),[r,d]=O.useState([]);O.useEffect(()=>{(async()=>{try{const p=await fetch("/fobos/pages_nav.json");if(!p.ok)throw new Error(`HTTP ${p.status}`);const y=await p.json();d(y.pages)}catch(T){console.error("Failed to load pages_nav.json",T)}})()},[]);const h=r.find(v=>v.id===f)||null;return w.jsxs(Cg,{children:[w.jsxs(Ug,{children:[w.jsx(zg,{isTextProvided:!0}),h&&w.jsx(Hg,{children:h?.name}),w.jsx(wg,{onClick:c,children:u?w.jsx(Ap,{}):w.jsx(Rp,{})})]}),w.jsx(Ng,{})]})},Dg=O.memo(Mg),Cg=dt.header`
+`,zg=({isTextProvided:u=!1})=>w.jsxs(_g,{to:"/home",children:[w.jsx(Rg,{src:"/fobos/favicon.png",alt:"logo"}),u&&w.jsx(Og,{children:"Fobos"})]}),Mg=({isDropdownOpened:u,onDropDownOpen:c})=>{const{pageId:f=""}=j0(),[r,d]=O.useState([]);O.useEffect(()=>{(async()=>{try{const p=await fetch("/fobos/pages_nav.json");if(!p.ok)throw new Error(`HTTP ${p.status}`);const y=await p.json();d(y.pages)}catch(T){console.error("Failed to load pages_nav.json",T)}})()},[]);const h=r.find(v=>v.id===f)||null;return w.jsxs(Cg,{children:[w.jsxs(Ug,{children:[w.jsx(zg,{isTextProvided:!0}),h&&w.jsx(Hg,{children:h?.name}),w.jsx(wg,{onClick:c,children:u?w.jsx(Ap,{}):w.jsx(Rp,{})})]}),w.jsx(Ng,{})]})},Dg=O.memo(Mg),Cg=dt.header`
     position: relative;
     z-index: 1500;
     display: flex;
