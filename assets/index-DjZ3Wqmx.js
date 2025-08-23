@@ -114,7 +114,7 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
         font-size: 32px;
         display: block;
     }
-`,zg=({isTextProvided:u=!1})=>w.jsxs(_g,{to:"/home",children:[w.jsx(Rg,{src:"/fobos/favicon.png",alt:"logo"}),u&&w.jsx(Og,{children:"Fobos"})]}),Mg=({isDropdownOpened:u,onDropDownOpen:c})=>{const{pageId:f=""}=j0(),[r,d]=O.useState([]);O.useEffect(()=>{(async()=>{try{const p=await fetch("/fobos/pages_nav.json");if(!p.ok)throw new Error(`HTTP ${p.status}`);const y=await p.json();d(y.pages)}catch(T){console.error("Failed to load pages_nav.json",T)}})()},[]);const h=r.find(v=>v.id===f)||null;return w.jsxs(Cg,{children:[w.jsxs(Ug,{children:[w.jsx(zg,{isTextProvided:!0}),h&&w.jsx(Hg,{children:h?.name}),w.jsx(wg,{onClick:c,children:u?w.jsx(Ap,{}):w.jsx(Rp,{})})]}),w.jsx(Ng,{})]})},Dg=O.memo(Mg),Cg=dt.header`
+`,zg=({isTextProvided:u=!1})=>w.jsxs(_g,{to:"/home",children:[w.jsx(Rg,{src:"/fobos/favicon.png",alt:"logo"}),u&&w.jsx(Og,{children:"Fobos"})]}),Mg={color:"rgba(128, 128, 128, 0.6)",margin:"0 20px 0 0"},Dg=({isDropdownOpened:u,onDropDownOpen:c})=>{const{pageId:f=""}=j0(),[r,d]=O.useState([]);O.useEffect(()=>{(async()=>{try{const p=await fetch("/fobos/pages_nav.json");if(!p.ok)throw new Error(`HTTP ${p.status}`);const y=await p.json();d(y.pages)}catch(T){console.error("Failed to load pages_nav.json",T)}})()},[]);const h=r.find(v=>v.id===f)||null;return w.jsxs(Ug,{children:[w.jsxs(Ng,{children:[w.jsx(zg,{isTextProvided:!0}),h&&w.jsx(wg,{children:h?.name}),w.jsx(jg,{onClick:c,children:u?w.jsx(Ap,{}):w.jsx(Rp,{})})]}),w.jsx(Hg,{children:w.jsx("span",{style:Mg,children:"Made by Erazor © 2025"})})]})},Cg=O.memo(Dg),Ug=dt.header`
     position: relative;
     z-index: 1500;
     display: flex;
@@ -127,14 +127,14 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
     @media screen and ${to} {
         min-height: 90px;
     }
-`,Ug=dt.nav`
+`,Ng=dt.nav`
   display: flex;
   @media screen and ${uc} {
     gap: 10px;
   }
-`,Ng=dt.div`
+`,Hg=dt.div`
   display: flex;
-`,Hg=dt.span`
+`,wg=dt.span`
   ${Ke.heading_l};
   display: block;
   place-content: center;
@@ -146,7 +146,7 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
   @media screen and ${to} {
     ${Ke.heading_xl};
   }
-`,wg=dt.button`
+`,jg=dt.button`
   display: flex;
   align-items: center;
   padding: 0 8px;
@@ -154,7 +154,7 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
   @media screen and ${Se} {
     display: none;
   }
-`,jg=dt.aside`
+`,Bg=dt.aside`
   @media screen and ${uc} {
     position: fixed;
     z-index: 1;
@@ -171,7 +171,7 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
     background: var(--color-primary-body-bg);
     border-right: 1px solid var(--color-border);
   }
-`,Bg=dt.div`
+`,qg=dt.div`
   background-color: var(--color-primary-body-bg);
   color: var(--color-medium-grey);
 
@@ -191,13 +191,13 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
     position: static;
     height: 100%;
   }
-`,qg=dt.div`
+`,Yg=dt.div`
   display: flex;
   flex-direction: column;
   flex: 1;
   height: 100%;
   justify-content: space-between;
-`,Yg=dt.h2`
+`,Lg=dt.h2`
   ${Ke.heading_s};
   letter-spacing: 2px;
   padding: 0 0 0 24px;
@@ -207,15 +207,15 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
     ${Ke.heading_m};
     padding: 31px 0 0 24px;
   }
-`,Lg=dt.div`
+`,Gg=dt.div`
   padding-right: 16px;
   overflow-y: auto;
   max-height: calc(100vh - 80px - 50px - 180px);
   flex: 1;
-`,Gg=dt.div`
+`,Xg=dt.div`
   place-items: center;
   flex-shrink: 0;
-`;var Ia=(u=>(u.Light="light-theme",u.Dark="dark-theme",u))(Ia||{});const Xg=()=>{const[u,c]=O.useState(localStorage.getItem("theme"));return O.useEffect(()=>{const f=Object.values(Ia).includes(u)?u:"dark-theme",r=document.body.classList;localStorage.setItem("theme",f),f==="light-theme"?r.remove("dark-theme"):r.add("dark-theme")},[u]),[u,c]},Zg=dt.button`
+`;var Ia=(u=>(u.Light="light-theme",u.Dark="dark-theme",u))(Ia||{});const Zg=()=>{const[u,c]=O.useState(localStorage.getItem("theme"));return O.useEffect(()=>{const f=Object.values(Ia).includes(u)?u:"dark-theme",r=document.body.classList;localStorage.setItem("theme",f),f==="light-theme"?r.remove("dark-theme"):r.add("dark-theme")},[u]),[u,c]},Qg=dt.button`
     display: flex;
     gap: 23px;
 
@@ -239,7 +239,7 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
 `,T0=dt.div.withConfig({shouldForwardProp:u=>u!=="active"})`
   color: ${({active:u})=>u?"var(--color-main-purple)":"var(--color-medium-grey)"};
   transition: color 0.3s;
-`,Qg=dt.div`
+`,Vg=dt.div`
   position: relative;
   display: flex;
   flex-shrink: 0;
@@ -249,7 +249,7 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
   border-radius: 10px;
   cursor: pointer;
   user-select: none;
-`,Vg=dt.div.withConfig({shouldForwardProp:u=>u!=="isChecked"})`
+`,Kg=dt.div.withConfig({shouldForwardProp:u=>u!=="isChecked"})`
   position: absolute;
   top: 4px;
   left: ${({isChecked:u})=>u?"calc(100% - 15px)":"3px"};
@@ -259,7 +259,7 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
   border-radius: 30px;
   transition: left 0.3s;
   z-index: 0;
-`,Kg=()=>w.jsx("svg",{width:"19",height:"19",xmlns:"http://www.w3.org/2000/svg",children:w.jsx("path",{d:"M9.167 15.833a.833.833 0 0 1 .833.834v.833a.833.833 0 0 1-1.667 0v-.833a.833.833 0 0 1 .834-.834ZM3.75 13.75a.833.833 0 0 1 .59 1.422l-1.25 1.25a.833.833 0 0 1-1.18-1.178l1.25-1.25a.833.833 0 0 1 .59-.244Zm10.833 0c.221 0 .433.088.59.244l1.25 1.25a.833.833 0 0 1-1.179 1.178l-1.25-1.25a.833.833 0 0 1 .59-1.422ZM9.167 5a4.167 4.167 0 1 1 0 8.334 4.167 4.167 0 0 1 0-8.334Zm-7.5 3.333a.833.833 0 0 1 0 1.667H.833a.833.833 0 1 1 0-1.667h.834Zm15.833 0a.833.833 0 0 1 0 1.667h-.833a.833.833 0 0 1 0-1.667h.833Zm-1.667-6.666a.833.833 0 0 1 .59 1.422l-1.25 1.25a.833.833 0 1 1-1.179-1.178l1.25-1.25a.833.833 0 0 1 .59-.244Zm-13.333 0c.221 0 .433.088.59.244l1.25 1.25a.833.833 0 0 1-1.18 1.178L1.91 3.09a.833.833 0 0 1 .59-1.422ZM9.167 0A.833.833 0 0 1 10 .833v.834a.833.833 0 1 1-1.667 0V.833A.833.833 0 0 1 9.167 0Z",fill:"#828FA3"})}),$g=()=>w.jsx("svg",{width:"16",height:"16",xmlns:"http://www.w3.org/2000/svg",children:w.jsx("path",{d:"M6.474.682c.434-.11.718.406.481.78A6.067 6.067 0 0 0 6.01 4.72c0 3.418 2.827 6.187 6.314 6.187.89.002 1.77-.182 2.584-.54.408-.18.894.165.724.57-1.16 2.775-3.944 4.73-7.194 4.73-4.292 0-7.771-3.41-7.771-7.615 0-3.541 2.466-6.518 5.807-7.37Zm8.433.07c.442-.294.969.232.674.674l-.525.787a1.943 1.943 0 0 0 0 2.157l.525.788c.295.441-.232.968-.674.673l-.787-.525a1.943 1.943 0 0 0-2.157 0l-.786.525c-.442.295-.97-.232-.675-.673l.525-.788a1.943 1.943 0 0 0 0-2.157l-.525-.787c-.295-.442.232-.968.674-.673l.787.525a1.943 1.943 0 0 0 2.157 0Z",fill:"#828FA3"})}),Jg=()=>{const[u,c]=Xg(),[f,r]=O.useState(u?u===Ia.Dark:!0),d=O.useCallback(()=>{c(u===Ia.Light?Ia.Dark:Ia.Light),r(h=>!h)},[u]);return w.jsxs(Zg,{onClick:d,type:"button","aria-pressed":f,children:[w.jsx(T0,{active:!f,children:w.jsx(Kg,{})}),w.jsx(Qg,{children:w.jsx(Vg,{isChecked:f})}),w.jsx(T0,{active:f,children:w.jsx($g,{})})]})},fu={[ml.Header]:{padding:"10px 18px",paddingTablet:"15px 25px",fontSize:"15px",lineHeight:"auto",width:"auto"},[ml.Main]:{padding:"15px 18px",paddingTablet:"15px 18px",fontSize:"15px",lineHeight:"auto",width:"auto"},[ml.Modal]:{padding:"9px 0",paddingTablet:"9px 0",fontSize:"13px",lineHeight:1.8,width:"100%"}},qi={[Xl.Primary]:{backgroundColor:"var(--color-accent-bg)",hoverBackgroundColor:"var(--color-main-purple-hover)",color:"var(--color-white)"},[Xl.Secondary]:{backgroundColor:"var(--color-light-accent-bg)",hoverBackgroundColor:"var(--color-light-accent-bg-hover)",color:"var(--color-accent-bg)"},[Xl.Destructive]:{backgroundColor:"var(--color-red)",hoverBackgroundColor:"var(--color-red-hover)",color:"var(--color-white)"}},p1=hl`
+`,$g=()=>w.jsx("svg",{width:"19",height:"19",xmlns:"http://www.w3.org/2000/svg",children:w.jsx("path",{d:"M9.167 15.833a.833.833 0 0 1 .833.834v.833a.833.833 0 0 1-1.667 0v-.833a.833.833 0 0 1 .834-.834ZM3.75 13.75a.833.833 0 0 1 .59 1.422l-1.25 1.25a.833.833 0 0 1-1.18-1.178l1.25-1.25a.833.833 0 0 1 .59-.244Zm10.833 0c.221 0 .433.088.59.244l1.25 1.25a.833.833 0 0 1-1.179 1.178l-1.25-1.25a.833.833 0 0 1 .59-1.422ZM9.167 5a4.167 4.167 0 1 1 0 8.334 4.167 4.167 0 0 1 0-8.334Zm-7.5 3.333a.833.833 0 0 1 0 1.667H.833a.833.833 0 1 1 0-1.667h.834Zm15.833 0a.833.833 0 0 1 0 1.667h-.833a.833.833 0 0 1 0-1.667h.833Zm-1.667-6.666a.833.833 0 0 1 .59 1.422l-1.25 1.25a.833.833 0 1 1-1.179-1.178l1.25-1.25a.833.833 0 0 1 .59-.244Zm-13.333 0c.221 0 .433.088.59.244l1.25 1.25a.833.833 0 0 1-1.18 1.178L1.91 3.09a.833.833 0 0 1 .59-1.422ZM9.167 0A.833.833 0 0 1 10 .833v.834a.833.833 0 1 1-1.667 0V.833A.833.833 0 0 1 9.167 0Z",fill:"#828FA3"})}),Jg=()=>w.jsx("svg",{width:"16",height:"16",xmlns:"http://www.w3.org/2000/svg",children:w.jsx("path",{d:"M6.474.682c.434-.11.718.406.481.78A6.067 6.067 0 0 0 6.01 4.72c0 3.418 2.827 6.187 6.314 6.187.89.002 1.77-.182 2.584-.54.408-.18.894.165.724.57-1.16 2.775-3.944 4.73-7.194 4.73-4.292 0-7.771-3.41-7.771-7.615 0-3.541 2.466-6.518 5.807-7.37Zm8.433.07c.442-.294.969.232.674.674l-.525.787a1.943 1.943 0 0 0 0 2.157l.525.788c.295.441-.232.968-.674.673l-.787-.525a1.943 1.943 0 0 0-2.157 0l-.786.525c-.442.295-.97-.232-.675-.673l.525-.788a1.943 1.943 0 0 0 0-2.157l-.525-.787c-.295-.442.232-.968.674-.673l.787.525a1.943 1.943 0 0 0 2.157 0Z",fill:"#828FA3"})}),kg=()=>{const[u,c]=Zg(),[f,r]=O.useState(u?u===Ia.Dark:!0),d=O.useCallback(()=>{c(u===Ia.Light?Ia.Dark:Ia.Light),r(h=>!h)},[u]);return w.jsxs(Qg,{onClick:d,type:"button","aria-pressed":f,children:[w.jsx(T0,{active:!f,children:w.jsx($g,{})}),w.jsx(Vg,{children:w.jsx(Kg,{isChecked:f})}),w.jsx(T0,{active:f,children:w.jsx(Jg,{})})]})},fu={[ml.Header]:{padding:"10px 18px",paddingTablet:"15px 25px",fontSize:"15px",lineHeight:"auto",width:"auto"},[ml.Main]:{padding:"15px 18px",paddingTablet:"15px 18px",fontSize:"15px",lineHeight:"auto",width:"auto"},[ml.Modal]:{padding:"9px 0",paddingTablet:"9px 0",fontSize:"13px",lineHeight:1.8,width:"100%"}},qi={[Xl.Primary]:{backgroundColor:"var(--color-accent-bg)",hoverBackgroundColor:"var(--color-main-purple-hover)",color:"var(--color-white)"},[Xl.Secondary]:{backgroundColor:"var(--color-light-accent-bg)",hoverBackgroundColor:"var(--color-light-accent-bg-hover)",color:"var(--color-accent-bg)"},[Xl.Destructive]:{backgroundColor:"var(--color-red)",hoverBackgroundColor:"var(--color-red-hover)",color:"var(--color-white)"}},p1=hl`
     ${Ke.heading_m}
     display: flex;
     align-items: center;
@@ -292,7 +292,7 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
     ${p1}
 `;dt(Pi).withConfig({shouldForwardProp:u=>!["variantColor","variantSize"].includes(u)})`
     ${p1}
-`;const kg=()=>w.jsx("svg",{width:"18",height:"16",xmlns:"http://www.w3.org/2000/svg",children:w.jsx("path",{d:"M8.522 11.223a4.252 4.252 0 0 1-3.654-5.22l3.654 5.22ZM9 12.25A8.685 8.685 0 0 1 1.5 8a8.612 8.612 0 0 1 2.76-2.864l-.86-1.23A10.112 10.112 0 0 0 .208 7.238a1.5 1.5 0 0 0 0 1.524A10.187 10.187 0 0 0 9 13.75c.414 0 .828-.025 1.239-.074l-1-1.43A8.88 8.88 0 0 1 9 12.25Zm8.792-3.488a10.14 10.14 0 0 1-4.486 4.046l1.504 2.148a.375.375 0 0 1-.092.523l-.648.453a.375.375 0 0 1-.523-.092L3.19 1.044A.375.375 0 0 1 3.282.52L3.93.068a.375.375 0 0 1 .523.092l1.735 2.479A10.308 10.308 0 0 1 9 2.25c3.746 0 7.031 2 8.792 4.988a1.5 1.5 0 0 1 0 1.524ZM16.5 8a8.674 8.674 0 0 0-6.755-4.219A1.75 1.75 0 1 0 12.75 5v-.001a4.25 4.25 0 0 1-1.154 5.366l.834 1.192A8.641 8.641 0 0 0 16.5 8Z"})}),Wg=()=>w.jsx("svg",{width:"16",height:"11",xmlns:"http://www.w3.org/2000/svg",children:w.jsx("path",{d:"M15.815 4.434A9.055 9.055 0 0 0 8 0 9.055 9.055 0 0 0 .185 4.434a1.333 1.333 0 0 0 0 1.354A9.055 9.055 0 0 0 8 10.222c3.33 0 6.25-1.777 7.815-4.434a1.333 1.333 0 0 0 0-1.354ZM8 8.89A3.776 3.776 0 0 1 4.222 5.11 3.776 3.776 0 0 1 8 1.333a3.776 3.776 0 0 1 3.778 3.778A3.776 3.776 0 0 1 8 8.89Zm2.889-3.778a2.889 2.889 0 1 1-5.438-1.36 1.19 1.19 0 1 0 1.19-1.189H6.64a2.889 2.889 0 0 1 4.25 2.549Z"})}),g1=({isSidebarVisible:u=!1,onClick:c})=>u?w.jsxs(Fg,{onClick:c,children:[w.jsx(kg,{}),"Hide Sidebar"]}):w.jsx(Pg,{onClick:c,children:w.jsx(Wg,{})}),Fg=dt.button`
+`;const Wg=()=>w.jsx("svg",{width:"18",height:"16",xmlns:"http://www.w3.org/2000/svg",children:w.jsx("path",{d:"M8.522 11.223a4.252 4.252 0 0 1-3.654-5.22l3.654 5.22ZM9 12.25A8.685 8.685 0 0 1 1.5 8a8.612 8.612 0 0 1 2.76-2.864l-.86-1.23A10.112 10.112 0 0 0 .208 7.238a1.5 1.5 0 0 0 0 1.524A10.187 10.187 0 0 0 9 13.75c.414 0 .828-.025 1.239-.074l-1-1.43A8.88 8.88 0 0 1 9 12.25Zm8.792-3.488a10.14 10.14 0 0 1-4.486 4.046l1.504 2.148a.375.375 0 0 1-.092.523l-.648.453a.375.375 0 0 1-.523-.092L3.19 1.044A.375.375 0 0 1 3.282.52L3.93.068a.375.375 0 0 1 .523.092l1.735 2.479A10.308 10.308 0 0 1 9 2.25c3.746 0 7.031 2 8.792 4.988a1.5 1.5 0 0 1 0 1.524ZM16.5 8a8.674 8.674 0 0 0-6.755-4.219A1.75 1.75 0 1 0 12.75 5v-.001a4.25 4.25 0 0 1-1.154 5.366l.834 1.192A8.641 8.641 0 0 0 16.5 8Z"})}),Fg=()=>w.jsx("svg",{width:"16",height:"11",xmlns:"http://www.w3.org/2000/svg",children:w.jsx("path",{d:"M15.815 4.434A9.055 9.055 0 0 0 8 0 9.055 9.055 0 0 0 .185 4.434a1.333 1.333 0 0 0 0 1.354A9.055 9.055 0 0 0 8 10.222c3.33 0 6.25-1.777 7.815-4.434a1.333 1.333 0 0 0 0-1.354ZM8 8.89A3.776 3.776 0 0 1 4.222 5.11 3.776 3.776 0 0 1 8 1.333a3.776 3.776 0 0 1 3.778 3.778A3.776 3.776 0 0 1 8 8.89Zm2.889-3.778a2.889 2.889 0 1 1-5.438-1.36 1.19 1.19 0 1 0 1.19-1.189H6.64a2.889 2.889 0 0 1 4.25 2.549Z"})}),g1=({isSidebarVisible:u=!1,onClick:c})=>u?w.jsxs(Pg,{onClick:c,children:[w.jsx(Wg,{}),"Hide Sidebar"]}):w.jsx(Ig,{onClick:c,children:w.jsx(Fg,{})}),Pg=dt.button`
     display: none;
 
     @media screen and ${Se} {
@@ -314,7 +314,7 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
             fill: var(--color-main-purple);
         }
     }
-`,Pg=dt.button`
+`,Ig=dt.button`
   display: none;
 
   @media screen and ${Se} {
@@ -346,7 +346,7 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
   &:focus {
     fill: var(--color-red);
   }
-`;const Ig=dt(Z0).withConfig({shouldForwardProp:u=>u!=="isActive"})`
+`;const tb=dt(Z0).withConfig({shouldForwardProp:u=>u!=="isActive"})`
     display: flex;
     align-items: center;
     padding: 0 0 0 24px;
@@ -371,13 +371,13 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
         color: var(--color-main-purple);
         fill: var(--color-main-purple);
     }
-`,tb=dt.span`
+`,eb=dt.span`
     ${Ke.heading_m};
     display: block;
     padding: 15px 0 15px 0;
-`,eb=()=>w.jsx("svg",{width:"16",height:"16",xmlns:"http://www.w3.org/2000/svg",children:w.jsx("path",{d:"M0 2.889A2.889 2.889 0 0 1 2.889 0H13.11A2.889 2.889 0 0 1 16 2.889V13.11A2.888 2.888 0 0 1 13.111 16H2.89A2.889 2.889 0 0 1 0 13.111V2.89Zm1.333 5.555v4.667c0 .859.697 1.556 1.556 1.556h6.889V8.444H1.333Zm8.445-1.333V1.333h-6.89A1.556 1.556 0 0 0 1.334 2.89V7.11h8.445Zm4.889-1.333H11.11v4.444h3.556V5.778Zm0 5.778H11.11v3.11h2a1.556 1.556 0 0 0 1.556-1.555v-1.555Zm0-7.112V2.89a1.555 1.555 0 0 0-1.556-1.556h-2v3.111h3.556Z"})}),lb=({isActive:u=!1,to:c="/",state:f,children:r})=>w.jsxs(Ig,{to:c,state:f,isActive:u,children:[w.jsx(eb,{}),w.jsx(tb,{children:r})]}),ab=({onClick:u})=>{const{pageId:c}=j0(),[f,r]=O.useState(null),[d,h]=O.useState(null);return O.useEffect(()=>{(async()=>{try{const p=await fetch("/fobos/pages_nav.json");if(!p.ok)throw new Error(`HTTP ${p.status}`);const y=await p.json();r(y)}catch(T){h(T.message)}})()},[]),console.log("pageId",c),w.jsx(jg,{onClick:u,children:w.jsxs(Bg,{onClick:v=>v.stopPropagation(),children:[w.jsx(Yg,{children:"ALL PAGES"}),w.jsxs(qg,{children:[w.jsx(Lg,{children:f?.pages?.map(({id:v,name:T})=>(console.log("id",v),w.jsx(lb,{to:`/${v}`,isActive:c===v,children:T},v)))}),w.jsxs(Gg,{children:[w.jsx(Jg,{}),w.jsx(g1,{isSidebarVisible:!0,onClick:u})]})]})]})})},nb=O.memo(ab),A0="#4fa94d",ub={"aria-busy":!0,role:"progressbar"},ib=dt.div`
+`,lb=()=>w.jsx("svg",{width:"16",height:"16",xmlns:"http://www.w3.org/2000/svg",children:w.jsx("path",{d:"M0 2.889A2.889 2.889 0 0 1 2.889 0H13.11A2.889 2.889 0 0 1 16 2.889V13.11A2.888 2.888 0 0 1 13.111 16H2.89A2.889 2.889 0 0 1 0 13.111V2.89Zm1.333 5.555v4.667c0 .859.697 1.556 1.556 1.556h6.889V8.444H1.333Zm8.445-1.333V1.333h-6.89A1.556 1.556 0 0 0 1.334 2.89V7.11h8.445Zm4.889-1.333H11.11v4.444h3.556V5.778Zm0 5.778H11.11v3.11h2a1.556 1.556 0 0 0 1.556-1.555v-1.555Zm0-7.112V2.89a1.555 1.555 0 0 0-1.556-1.556h-2v3.111h3.556Z"})}),ab=({isActive:u=!1,to:c="/",state:f,children:r})=>w.jsxs(tb,{to:c,state:f,isActive:u,children:[w.jsx(lb,{}),w.jsx(eb,{children:r})]}),nb=({onClick:u})=>{const{pageId:c}=j0(),[f,r]=O.useState(null),[d,h]=O.useState(null);return O.useEffect(()=>{(async()=>{try{const p=await fetch("/fobos/pages_nav.json");if(!p.ok)throw new Error(`HTTP ${p.status}`);const y=await p.json();r(y)}catch(T){h(T.message)}})()},[]),w.jsx(Bg,{onClick:u,children:w.jsxs(qg,{onClick:v=>v.stopPropagation(),children:[w.jsx(Lg,{children:"ВСЕ СТРАНИЦЫ"}),w.jsxs(Yg,{children:[w.jsx(Gg,{children:f?.pages?.map(({id:v,name:T})=>(console.log("id",v),w.jsx(ab,{to:`/${v}`,isActive:c===v,children:T},v)))}),w.jsxs(Xg,{children:[w.jsx(kg,{}),w.jsx(g1,{isSidebarVisible:!0,onClick:u})]})]})]})})},ub=O.memo(nb),A0="#4fa94d",ib={"aria-busy":!0,role:"progressbar"},cb=dt.div`
   display: ${u=>u.$visible?"flex":"none"};
-`,we=242.776657104492,cb=1.6,rb=If`
+`,we=242.776657104492,rb=1.6,fb=If`
 12.5% {
   stroke-dasharray: ${we*.14}px, ${we}px;
   stroke-dashoffset: -${we*.11}px;
@@ -393,13 +393,13 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
 `;dt.path`
   stroke-dasharray: ${we*.01}px, ${we};
   stroke-dashoffset: 0;
-  animation: ${rb} ${cb}s linear infinite;
-`;const fb=({height:u=90,width:c=80,radius:f=12.5,color:r=A0,secondaryColor:d=A0,ariaLabel:h="mutating-dots-loading",wrapperStyle:v,wrapperClass:T,visible:p=!0})=>w.jsx(ib,{style:v,$visible:p,className:T,"data-testid":"mutating-dots-loading","aria-label":h,...ub,children:w.jsxs("svg",{id:"goo-loader",width:c,height:u,"data-testid":"mutating-dots-svg",children:[w.jsxs("filter",{id:"fancy-goo",children:[w.jsx("feGaussianBlur",{in:"SourceGraphic",stdDeviation:"6",result:"blur"}),w.jsx("feColorMatrix",{in:"blur",mode:"matrix",values:"1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9",result:"goo"}),w.jsx("feComposite",{in:"SourceGraphic",in2:"goo",operator:"atop"})]}),w.jsxs("g",{filter:"url(#fancy-goo)",children:[w.jsx("animateTransform",{id:"mainAnim",attributeName:"transform",attributeType:"XML",type:"rotate",from:"0 50 50",to:"359 50 50",dur:"1.2s",repeatCount:"indefinite"}),w.jsx("circle",{cx:"50%",cy:"40",r:f,fill:r,children:w.jsx("animate",{id:"cAnim1",attributeType:"XML",attributeName:"cy",dur:"0.6s",begin:"0;cAnim1.end+0.2s",calcMode:"spline",values:"40;20;40",keyTimes:"0;0.3;1",keySplines:"0.09, 0.45, 0.16, 1;0.09, 0.45, 0.16, 1"})}),w.jsx("circle",{cx:"50%",cy:"60",r:f,fill:d,children:w.jsx("animate",{id:"cAnim2",attributeType:"XML",attributeName:"cy",dur:"0.6s",begin:"0.4s;cAnim2.end+0.2s",calcMode:"spline",values:"60;80;60",keyTimes:"0;0.3;1",keySplines:"0.09, 0.45, 0.16, 1;0.09, 0.45, 0.16, 1"})})]})]})}),ob=If`
+  animation: ${fb} ${rb}s linear infinite;
+`;const ob=({height:u=90,width:c=80,radius:f=12.5,color:r=A0,secondaryColor:d=A0,ariaLabel:h="mutating-dots-loading",wrapperStyle:v,wrapperClass:T,visible:p=!0})=>w.jsx(cb,{style:v,$visible:p,className:T,"data-testid":"mutating-dots-loading","aria-label":h,...ib,children:w.jsxs("svg",{id:"goo-loader",width:c,height:u,"data-testid":"mutating-dots-svg",children:[w.jsxs("filter",{id:"fancy-goo",children:[w.jsx("feGaussianBlur",{in:"SourceGraphic",stdDeviation:"6",result:"blur"}),w.jsx("feColorMatrix",{in:"blur",mode:"matrix",values:"1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9",result:"goo"}),w.jsx("feComposite",{in:"SourceGraphic",in2:"goo",operator:"atop"})]}),w.jsxs("g",{filter:"url(#fancy-goo)",children:[w.jsx("animateTransform",{id:"mainAnim",attributeName:"transform",attributeType:"XML",type:"rotate",from:"0 50 50",to:"359 50 50",dur:"1.2s",repeatCount:"indefinite"}),w.jsx("circle",{cx:"50%",cy:"40",r:f,fill:r,children:w.jsx("animate",{id:"cAnim1",attributeType:"XML",attributeName:"cy",dur:"0.6s",begin:"0;cAnim1.end+0.2s",calcMode:"spline",values:"40;20;40",keyTimes:"0;0.3;1",keySplines:"0.09, 0.45, 0.16, 1;0.09, 0.45, 0.16, 1"})}),w.jsx("circle",{cx:"50%",cy:"60",r:f,fill:d,children:w.jsx("animate",{id:"cAnim2",attributeType:"XML",attributeName:"cy",dur:"0.6s",begin:"0.4s;cAnim2.end+0.2s",calcMode:"spline",values:"60;80;60",keyTimes:"0;0.3;1",keySplines:"0.09, 0.45, 0.16, 1;0.09, 0.45, 0.16, 1"})})]})]})}),sb=If`
 to {
    transform: rotate(360deg);
  }
 `;dt.svg`
-  animation: ${ob} 0.75s steps(12, end) infinite;
+  animation: ${sb} 0.75s steps(12, end) infinite;
   animation-duration: 0.75s;
 `;dt.polyline`
   stroke-width: ${u=>u.width}px;
@@ -448,21 +448,21 @@ to {
   &:nth-child(12n + 11) {
     stroke-opacity: 0.92;
   }
-`;const sb=If`
+`;const db=If`
 to {
    stroke-dashoffset: 136;
  }
 `;dt.polygon`
   stroke-dasharray: 17;
-  animation: ${sb} 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
+  animation: ${db} 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
 `;dt.svg`
   transform-origin: 50% 65%;
-`;const db=dt(fb)`
+`;const hb=dt(ob)`
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-`,hb=dt.div`
+`,mb=dt.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -472,7 +472,7 @@ to {
   align-items: center;
   justify-content: center;
   z-index: 5550;
-`,mb=dt.div.withConfig({shouldForwardProp:u=>u!=="isMobile"})`
+`,yb=dt.div.withConfig({shouldForwardProp:u=>u!=="isMobile"})`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -483,10 +483,10 @@ to {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1500;
-`,yb=({onClick:u,isMobile:c=!1,children:f})=>w.jsx(mb,{onClick:u,isMobile:c,children:f}),vb=()=>w.jsx(db,{height:"100",width:"100",color:"#635FC7",secondaryColor:"#A8A4FF",radius:"12.5",ariaLabel:"mutating-dots-loading",wrapperStyle:{},wrapperClass:"",visible:!0}),b1=({isLoading:u})=>{const c=document.getElementById("loading-root");return c?u&&Tp.createPortal(w.jsx(yb,{children:w.jsx(hb,{children:w.jsx(vb,{})})}),c):null},pb=dt.div`
+`,vb=({onClick:u,isMobile:c=!1,children:f})=>w.jsx(yb,{onClick:u,isMobile:c,children:f}),pb=()=>w.jsx(hb,{height:"100",width:"100",color:"#635FC7",secondaryColor:"#A8A4FF",radius:"12.5",ariaLabel:"mutating-dots-loading",wrapperStyle:{},wrapperClass:"",visible:!0}),b1=({isLoading:u})=>{const c=document.getElementById("loading-root");return c?u&&Tp.createPortal(w.jsx(vb,{children:w.jsx(mb,{children:w.jsx(pb,{})})}),c):null},gb=dt.div`
     display: flex;
     flex: 1;
-`,gb=dt.main`
+`,bb=dt.main`
     ${Ke.heading_l}
     flex: 1;
     width: 100%;
@@ -495,4 +495,4 @@ to {
 
     background-color: var(--color-secondary-body-bg);
     color: var(--color-medium-grey);
-`,bb=w.jsx(b1,{isLoading:!0}),Sb=()=>{const[u,c]=O.useState(()=>window.matchMedia(Se).matches),[f,r]=O.useState(!0);O.useEffect(()=>{const h=setTimeout(()=>r(!1),500);return()=>clearTimeout(h)},[]);const d=O.useCallback(()=>{c(h=>!h)},[]);return w.jsxs(O.Suspense,{fallback:bb,children:[f&&w.jsx(b1,{isLoading:!0}),w.jsx(Dg,{isDropdownOpened:u,onDropDownOpen:d}),w.jsxs(pb,{children:[u?w.jsx(nb,{onClick:d}):w.jsx(g1,{isSidebarVisible:!1,onClick:d}),w.jsx(gb,{children:w.jsx(Xv,{})})]})]})},Eb=()=>w.jsx("div",{children:"Home"}),xb=()=>w.jsx("div",{children:"Oops! Not found :("}),Tb=()=>w.jsx("div",{children:"Generic page by :pageId"}),Ab=()=>w.jsx(Qv,{children:w.jsxs(ou,{path:"/",element:w.jsx(Sb,{}),children:[w.jsx(ou,{index:!0,element:w.jsx(Eb,{})}),w.jsx(ou,{path:":pageId",element:w.jsx(Tb,{})}),w.jsx(ou,{path:"*",element:w.jsx(xb,{})})]})});Wy.createRoot(document.getElementById("root")).render(w.jsx(O.StrictMode,{children:w.jsx(hp,{basename:"/fobos/",children:w.jsx(Ab,{})})}));
+`,Sb=w.jsx(b1,{isLoading:!0}),Eb=()=>{const[u,c]=O.useState(()=>window.matchMedia(Se).matches),[f,r]=O.useState(!0);O.useEffect(()=>{const h=setTimeout(()=>r(!1),500);return()=>clearTimeout(h)},[]);const d=O.useCallback(()=>{c(h=>!h)},[]);return w.jsxs(O.Suspense,{fallback:Sb,children:[f&&w.jsx(b1,{isLoading:!0}),w.jsx(Cg,{isDropdownOpened:u,onDropDownOpen:d}),w.jsxs(gb,{children:[u?w.jsx(ub,{onClick:d}):w.jsx(g1,{isSidebarVisible:!1,onClick:d}),w.jsx(bb,{children:w.jsx(Xv,{})})]})]})},xb=()=>w.jsx("div",{children:"Home"}),Tb=()=>w.jsx("div",{children:"Oops! Not found :("}),Ab=()=>w.jsx("div",{children:"Generic page by :pageId"}),Rb=()=>w.jsx(Qv,{children:w.jsxs(ou,{path:"/",element:w.jsx(Eb,{}),children:[w.jsx(ou,{index:!0,element:w.jsx(xb,{})}),w.jsx(ou,{path:":pageId",element:w.jsx(Ab,{})}),w.jsx(ou,{path:"*",element:w.jsx(Tb,{})})]})});Wy.createRoot(document.getElementById("root")).render(w.jsx(O.StrictMode,{children:w.jsx(hp,{basename:"/fobos/",children:w.jsx(Rb,{})})}));
